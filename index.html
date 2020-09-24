@@ -7,11 +7,55 @@
   </head>
   <body>
     <h1>JS code</h1>
+
     <script>
-      function sayHello(name) {
-        console.log("Hello " + name);
+      //Object
+      let cat = {
+        name: "Fluffy",
+        paralyzed: false,
+        age: 20,
+        climb(where) {
+          console.log("The cat is climbing the " + where);
+        },
+        owner: {
+          name: "Charlotte",
+          age: 33,
+        },
+      };
+
+      //Object eget
+      let me = {
+        name: "Charlotte",
+        age: "33",
+        from: {
+          country: "Sweden",
+          town: "Svedala",
+          planet(earth) {
+            console.log("I'm from planet " + earth);
+          },
+        },
+      };
+
+      console.log(cat);
+
+      function summera(tal1, tal2) {
+        return tal1 + tal2;
       }
-      sayHello("Charlotte");
+      let summa = summera(5, 20);
+
+      function concatStrings(sumAnswer, sumString) {
+        console.log(sumAnswer + sumString);
+      }
+
+      concatStrings("Summan blir ", summa);
+
+      function sayHello(title, name, surname) {
+        console.log("Hello " + name);
+        let fullName = title + name + surname;
+        return fullName;
+      }
+      let answer = sayHello("miss", "Charlotte", "Holst");
+      console.log(answer);
     </script>
   </body>
 </html>
